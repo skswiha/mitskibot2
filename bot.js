@@ -17,7 +17,9 @@ async function getLyrics(){
     });
     
     for await (const line of rl){
-       lyrics.push(line);
+       if (line != ""){
+       	lyrics.push(line);
+       }
     }
     return lyrics;
 }
